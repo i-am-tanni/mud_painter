@@ -35,8 +35,8 @@ Repetitions in the symbols determine any leading zeroes if applicable.
 Example:
 
 ```
-If symbol = {r} and number = 0, result will be "0"
-If symbol = {rr} and number = 0, result will be "00"
+If symbol = {r} and number = 60, result will be "60"
+If symbol = {rrr} and number = 60, result will be "060"
 ```
 
-**Warning**: The largest number of repetitions results in the padding number regardless of consecutiveness. 
+**Warning**: The largest number of repetitions results in the padding number regardless of consecutiveness.
