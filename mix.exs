@@ -1,12 +1,13 @@
-defmodule Nimble.MixProject do
+defmodule MudPainter.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :nimble,
-      version: "0.1.0",
+      app: :mud_painter,
+      version: "0.9.0",
       elixir: "~> 1.13",
       start_permanent: Mix.env() == :prod,
+      escript: [main_module: MudPainter],
       deps: deps()
     ]
   end
@@ -24,8 +25,6 @@ defmodule Nimble.MixProject do
       {:rustler, "~> 0.25.0"},
       {:nimble_parsec, "~> 1.0"},
       {:jason, "~> 1.4"}
-      # {:dep_from_hexpm, "~> 0.3.0"},
-      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
     ]
   end
 end

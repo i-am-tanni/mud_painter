@@ -1,21 +1,54 @@
-# Nimble
+# MudPainter
 
-**TODO: Add description**
+## Description
+
+A tool for converting REXPaint XML files to a custom color-encoded format.
+
+Useful for MUDs and other text-based applications with custom color encodings.
+
+## To Use
+
+In the terminal `ls` to the cloned directory and enter the following inputs:
+
+```
+> iex -S mix
+> MudPainter.run(<path/to/xml/file.xml>, <path/to/format/file.json>)
+```
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `nimble` to your list of dependencies in `mix.exs`:
+Erlang is the only dependency that must be installed to run this tool.
 
-```elixir
-def deps do
-  [
-    {:nimble, "~> 0.1.0"}
-  ]
-end
+## Compiling
+
+To compile use the following terminal command from the cloned directory:
+
+```
+mix escript.build
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/nimble>.
+## Formats
 
+Formats are provided as json.
+
+Repetitions in the symbols determine any leading zeroes if applicable.
+
+### Warning
+
+The largest number of repetitions results in the padding number.
+Does NOT consider consecutivity
+
+Example:
+
+```
+If symbol = {r}, number = 0, result will be "0"
+If symbol = {rr}, number = 0, result will be "00"
+```
+
+Considered color modes are:
+
+- TrueColor 24 bit
+- 256 colors
+- 16 colors
+
+See mud_painter/config for format fields and mud_painter/formats for examples

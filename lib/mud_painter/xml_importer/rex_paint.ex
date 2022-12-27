@@ -1,4 +1,4 @@
-defmodule Nimble.RexPaintXML do
+defmodule MudPainter.XMLImporter.REXPaint do
   import NimbleParsec
 
   def parser() do

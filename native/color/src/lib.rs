@@ -20,16 +20,16 @@
 // Sourced from Tmux colour.c
 
 fn colour_dist_sq(r1: i32, g1: i32, b1: i32, r2: i32, g2: i32, b2: i32) -> i32 {
-	(r1 - r2) * (r1 - r2) + (g1 - g2) * (g1 - g2) + (b1 - b2) * (b1 - b2)
+    (r1 - r2) * (r1 - r2) + (g1 - g2) * (g1 - g2) + (b1 - b2) * (b1 - b2)
 }
 
 fn colour_to_6cube(v: i32) -> i32 {
-	if v < 48 {
-		0
+    if v < 48 {
+        0
     } else if v < 114 {
-		1
+        1
     } else {
-	    (v - 35) / 40
+        (v - 35) / 40
     }
 }
 
@@ -46,37 +46,35 @@ fn colour_to_6cube(v: i32) -> i32 {
 
 #[rustler::nif]
 fn rgb_to_color256(r: i32, g: i32, b: i32) -> i32 {
-    const Q2C:[i32; 6] = [ 0x00, 0x5f, 0x87, 0xaf, 0xd7, 0xff ];
+    const Q2C: [i32; 6] = [0x00, 0x5f, 0x87, 0xaf, 0xd7, 0xff];
 
-    let qr = colour_to_6cube(r); 
+    let qr = colour_to_6cube(r);
     let cr = Q2C[qr as usize];
-    let qg = colour_to_6cube(g); 
+    let qg = colour_to_6cube(g);
     let cg = Q2C[qg as usize];
-	let qb = colour_to_6cube(b); 
+    let qb = colour_to_6cube(b);
     let cb = Q2C[qb as usize];
 
     if cr == r && cg == g && cb == b {
-		return 16 + (36 * qr) + (6 * qg) + qb
+        return 16 + (36 * qr) + (6 * qg) + qb;
     }
 
     let grey_avg: i32 = (r + g + b) / 3;
-    let grey_idx = 
-        if grey_avg > 238 {
-		    23
-        } else {
-		    (grey_avg - 3) / 10
-        };
-	let grey = 8 + (10 * grey_idx);
+    let grey_idx = if grey_avg > 238 {
+        23
+    } else {
+        (grey_avg - 3) / 10
+    };
+    let grey = 8 + (10 * grey_idx);
 
     // Is grey or 6x6x6 colour closest?
-	let d = colour_dist_sq(cr, cg, cb, r, g, b);
-    let idx = 
-        if colour_dist_sq(grey, grey, grey, r, g, b) < d {
-            232 + grey_idx
-        } else {
-            16 + (36 * qr) + (6 * qg) + qb
-        };
+    let d = colour_dist_sq(cr, cg, cb, r, g, b);
+    let idx = if colour_dist_sq(grey, grey, grey, r, g, b) < d {
+        232 + grey_idx
+    } else {
+        16 + (36 * qr) + (6 * qg) + qb
+    };
     idx
 }
 
-rustler::init!("Elixir.Nimble.Color.ANSII", [rgb_to_color256]);
+rustler::init!("Elixir.MudPainter.Converter.Downsample", [rgb_to_color256]);
