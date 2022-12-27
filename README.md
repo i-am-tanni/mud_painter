@@ -36,7 +36,7 @@ Example:
 
 ```
 If symbol = {r} and number = 0, result will be "0"
-If symbol = {rr} = 0, result will be "00"
+If symbol = {rr} and number = 0, result will be "00"
 ```
 
 **Warning**: The largest number of repetitions results in the padding number regardless of consecutiveness. 
