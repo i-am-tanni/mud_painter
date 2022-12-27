@@ -23,7 +23,7 @@ In the terminal `cd` to the cloned directory and enter the following inputs:
 
 Formats are provided as json.
 
-Format files inform the custom encoding patterns for the output.
+Format files inform the color encoding patterns for the output.
 
 - See `/lib/mud_painter/config` for format fields
 - See `/formats` for examples.
