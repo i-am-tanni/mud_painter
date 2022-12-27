@@ -2,7 +2,7 @@
 
 ## Description
 
-Converts REXPaint xml ascii-art files to a custom encoding and downsampling.
+Converts REXPaint xml ascii-art files to a custom encoding and downsamples as needed.
 
 Useful for MUDs and other text based applications.
 
