@@ -2,9 +2,7 @@
 
 ## Description
 
-A tool for converting REXPaint XML files to a custom color-encoded format.
-
-Useful for MUDs and other text-based applications with custom color encodings.
+A tool for quick export of REXPaint XML files to a custom encoded format.
 
 Supported color modes:
 
