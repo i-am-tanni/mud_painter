@@ -23,7 +23,7 @@ In the terminal `cd` to the cloned directory and enter the following inputs:
 
 Formats are provided as json.
 
-Format files inform the color encoding patterns for the output.
+Format files inform the color encoding patterns for output.
 
 - See `/lib/mud_painter/config` for format fields
 - See `/formats` for examples.
@@ -35,8 +35,8 @@ Repetitions in the symbols determine any leading zeroes if applicable.
 Example:
 
 ```
-If symbol = {r} and number = 60, result will be "60"
-If symbol = {rrr} and number = 60, result will be "060"
+If symbol = {r} and number = 10 (base 10), result will be "10"
+If symbol = {rrr} and number = 10 (base 10), result will be "010"
 ```
 
 **Warning**: The largest number of repetitions results in the padding number regardless of consecutiveness.

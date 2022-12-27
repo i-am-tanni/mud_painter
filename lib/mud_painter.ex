@@ -8,6 +8,6 @@ defmodule MudPainter do
   end
 
   def example() do
-    run("data/test.xml", "formats/lumen_et_umbra.json")
+    run("data/test.xml", "formats/ansi_true_color.json")
   end
 end
