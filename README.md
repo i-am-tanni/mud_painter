@@ -33,7 +33,7 @@ Formats are provided as json.
 
 Repetitions in the symbols determine any leading zeroes if applicable.
 
-### Warning
+**Warning**
 
 The largest number of repetitions results in the padding number.
 Does NOT consider consecutivity
