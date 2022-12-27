@@ -105,8 +105,6 @@ defmodule MudPainter.Converter do
 
         [ascii: char, fgd: fgd = [r1, g1, b1], bkg: ^last_bkg] ->
           char = [EEx.eval_string(config.foreground, r1: r1, g1: g1, b1: b1), char]
-          IO.puts("r: #{r1}, g: #{g1}, b: #{b1}")
-          IO.inspect(config.foreground)
           {[char | result], {fgd, last_bkg}}
 
         [ascii: char, fgd: ^last_fgd, bkg: bkg = [r2, g2, b2]] ->

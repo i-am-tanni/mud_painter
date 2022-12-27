@@ -118,30 +118,30 @@ defmodule MudPainter.ConfigImporter do
       config.foreground
       |> String.replace(
         config.r,
-        "<%= MudPainter.Converter.to_string_and_pad(r1, #{config.base}) %>"
+        "<%= MudPainter.Converter.to_string_and_pad(r1, #{config.base}, \"#{config.r}\") %>"
       )
       |> String.replace(
         config.g,
-        "<%= MudPainter.Converter.to_string_and_pad(g1, #{config.base}) %>"
+        "<%= MudPainter.Converter.to_string_and_pad(g1, #{config.base}, \"#{config.g}\") %>"
       )
       |> String.replace(
         config.b,
-        "<%= MudPainter.Converter.to_string_and_pad(b1, #{config.base}) %>"
+        "<%= MudPainter.Converter.to_string_and_pad(b1, #{config.base}, \"#{config.b}\") %>"
       )
 
     background =
       config.background
       |> String.replace(
         config.r,
-        "<%= MudPainter.Converter.to_string_and_pad(r2, #{config.base}) %>"
+        "<%= MudPainter.Converter.to_string_and_pad(r2, #{config.base}, \"#{config.r}\") %>"
       )
       |> String.replace(
         config.g,
-        "<%= MudPainter.Converter.to_string_and_pad(g2, #{config.base}) %>"
+        "<%= MudPainter.Converter.to_string_and_pad(g2, #{config.base}, \"#{config.g}\") %>"
       )
       |> String.replace(
         config.b,
-        "<%= MudPainter.Converter.to_string_and_pad(b2, #{config.base}) %>"
+        "<%= MudPainter.Converter.to_string_and_pad(b2, #{config.base}, \"#{config.b}\") %>"
       )
 
     %{config | foreground: foreground, background: background}

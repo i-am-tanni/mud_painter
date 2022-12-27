@@ -1,8 +1,8 @@
 {
-    "color_mode": "256",
-    "symbol": "{c}",
-    "foreground": "%x{c}",
-    "background": "%X{c}",
-    "reset": "%xn%xN",
-    "base": 10
+  "color_mode": "256",
+  "symbol": "{c}",
+  "foreground": "%x{c}",
+  "background": "%X{c}",
+  "reset": "%xn%xN",
+  "base": 10
 }
