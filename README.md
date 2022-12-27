@@ -12,7 +12,7 @@ In the terminal `ls` to the cloned directory and enter the following inputs:
 
 ```
 > iex -S mix
-> MudPainter.run(<path/to/xml/file.xml>, <path/to/format/file.json>)
+> MudPainter.run("path/to/xml/file.xml", "path/to/format/file.json")
 ```
 
 ## Installation
@@ -29,7 +29,7 @@ mix escript.build
 
 ## Formats
 
-Formats are provided as json.
+Formats are provided as json and a few examples are contained in the folder: `MudPainter/formats`
 
 Repetitions in the symbols determine any leading zeroes if applicable.
 
