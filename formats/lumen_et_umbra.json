@@ -5,6 +5,6 @@
     "b": "bb",
     "foreground": "$chfrrggbb",
     "background": "$chbrrggbb",
-    "reset": "$chk",
+    "reset": "$chk000000",
     "base": 16
   }
