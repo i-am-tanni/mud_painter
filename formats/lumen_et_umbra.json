@@ -4,7 +4,7 @@
     "g": "gg",
     "b": "bb",
     "foreground": "$chfrrggbb",
-    "background": "$chb{rrggbb",
+    "background": "$chbrrggbb",
     "reset": "$chk000000",
     "base": 16
   }
