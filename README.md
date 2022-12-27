@@ -25,18 +25,19 @@ Formats are provided as json.
 
 Format files inform the custom encoding patterns for the output.
 
-See `/lib/mud_painter/config` for format fields and `/formats` for examples.
+- See `/lib/mud_painter/config` for format fields
+- See `/formats` for examples.
 
 ### Symbols
 
 Repetitions in the symbols determine any leading zeroes if applicable.
 
-**Warning**: The largest number of repetitions results in the padding number.
-Consecutivness is not considered.
-
 Example:
 
 ```
-If symbol = {r}, number = 0, result will be "0"
-If symbol = {rr}, number = 0, result will be "00"
+If symbol = {r} and number = 0, result will be "0"
+If symbol = {rr} = 0, result will be "00"
 ```
+
+**Warning**: The largest number of repetitions results in the padding number.
+Consecutivness is not considered.
