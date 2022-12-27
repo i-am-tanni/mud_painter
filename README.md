@@ -8,23 +8,11 @@ Useful for MUDs and other text-based applications with custom color encodings.
 
 ## To Use
 
-In the terminal `ls` to the cloned directory and enter the following inputs:
+In the terminal `cd` to the cloned directory and enter the following inputs:
 
 ```
 > iex -S mix
-> MudPainter.run("path/to/xml/file.xml", "path/to/format/file.json")
-```
-
-## Installation
-
-Erlang is the only dependency that must be installed to run this tool.
-
-## Compiling
-
-To compile use the following terminal command from the cloned directory:
-
-```
-mix escript.build
+> MudPainter.run("path/to/xml_file.xml", "path/to/format_file.json")
 ```
 
 ## Formats
@@ -33,9 +21,7 @@ Formats are provided as json and a few examples are contained in the folder: `Mu
 
 Repetitions in the symbols determine any leading zeroes if applicable.
 
-**Warning**
-
-The largest number of repetitions results in the padding number.
+**Warning**: The largest number of repetitions results in the padding number.
 Does NOT consider consecutivity
 
 Example:
@@ -51,4 +37,4 @@ Considered color modes are:
 - 256 colors
 - 16 colors
 
-See mud_painter/config for format fields and mud_painter/formats for examples
+See `lib/mud_painter/config` for format fields and `/formats` for examples
