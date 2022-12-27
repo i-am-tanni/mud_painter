@@ -6,6 +6,12 @@ A tool for converting REXPaint XML files to a custom color-encoded format.
 
 Useful for MUDs and other text-based applications with custom color encodings.
 
+Supported color modes:
+
+- TrueColor 24 bit
+- xterm 256
+- 16 colors
+
 ## To Use
 
 In the terminal `cd` to the cloned directory and enter the following inputs:
@@ -17,12 +23,18 @@ In the terminal `cd` to the cloned directory and enter the following inputs:
 
 ## Formats
 
-Formats are provided as json and a few examples are contained in the folder: `MudPainter/formats`
+Formats are provided as json.
+
+These files provide the custom encoding patterns for the output.
+
+See `/lib/mud_painter/config` for format fields and `/formats` for examples.
+
+### Symbols
 
 Repetitions in the symbols determine any leading zeroes if applicable.
 
 **Warning**: The largest number of repetitions results in the padding number.
-Does NOT consider consecutivity
+Consecutivness is not considered.
 
 Example:
 
@@ -30,11 +42,3 @@ Example:
 If symbol = {r}, number = 0, result will be "0"
 If symbol = {rr}, number = 0, result will be "00"
 ```
-
-Considered color modes are:
-
-- TrueColor 24 bit
-- 256 colors
-- 16 colors
-
-See `lib/mud_painter/config` for format fields and `/formats` for examples
