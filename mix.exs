@@ -7,7 +7,6 @@ defmodule MudPainter.MixProject do
       version: "0.9.0",
       elixir: "~> 1.13",
       start_permanent: Mix.env() == :prod,
-      escript: [main_module: MudPainter],
       deps: deps()
     ]
   end
