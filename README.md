@@ -2,7 +2,9 @@
 
 ## Description
 
-A tool for quick export of REXPaint XML files to a custom encoded format.
+Converts REXPaint xml ascii-art files to a custom encoding and downsampling.
+
+Useful for MUDs and other text based applications.
 
 Supported color modes:
 
@@ -25,8 +27,8 @@ Formats are provided as json.
 
 Format files inform the color encoding patterns for output.
 
+- See `/formats` for examples
 - See `/lib/mud_painter/config` for format fields
-- See `/formats` for examples.
 
 ### Symbols
 
@@ -38,5 +40,3 @@ Example:
 If symbol = {r} and number = 10 (base 10), result will be "10"
 If symbol = {rrr} and number = 10 (base 10), result will be "010"
 ```
-
-**Warning**: The largest number of repetitions results in the padding number regardless of consecutiveness.
