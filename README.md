@@ -21,6 +21,11 @@ In the terminal `cd` to the cloned directory and enter the following inputs:
 > MudPainter.run("path/to/xml_file.xml", "path/to/format_file.json")
 ```
 
+## Dependencies
+
+- Elixir 1.13
+- Erlang/OTP 17.0
+
 ## Formats
 
 Formats are provided as json.
