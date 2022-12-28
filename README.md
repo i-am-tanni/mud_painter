@@ -14,17 +14,18 @@ Supported color modes:
 
 ## To Use
 
-In the terminal `cd` to the cloned directory and enter the following inputs:
+In the terminal `cd` to the cloned directory and enter the following input:
 
 ```
-> iex -S mix
-> MudPainter.run("path/to/xml_file.xml", "path/to/format_file.json")
+$ _build/prod/rel/mud_painter/bin/mud_painter eval "MudPainter.run(~s(path/to/xml_file.xml), ~s(path/to/format_file.json)"
 ```
 
-## Dependencies
+Example:
 
-- Elixir 1.13
-- Erlang/OTP 17.0
+```
+$ _build/prod/rel/mud_painter/bin/mud_painter eval "MudPainter.run(~s(data/test.xml), ~s(formats/leu.json))"
+  Success! "data/test.txt" created.
+```
 
 ## Formats
 

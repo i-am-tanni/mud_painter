@@ -23,7 +23,23 @@ defmodule MudPainter.MixProject do
     [
       {:rustler, "~> 0.25.0"},
       {:nimble_parsec, "~> 1.0"},
-      {:jason, "~> 1.4"}
+      {:jason, "~> 1.4"},
+      {:burrito, github: "burrito-elixir/burrito"}
+    ]
+  end
+
+  def releases do
+    [
+      mud_painter: [
+        steps: [:assemble, &Burrito.wrap/1],
+        burrito: [
+          targets: [
+            macos: [os: :darwin, cpu: :x86_64],
+            linux: [os: :linux, cpu: :x86_64],
+            windows: [os: :windows, cpu: :x86_64]
+          ]
+        ]
+      ]
     ]
   end
 end
