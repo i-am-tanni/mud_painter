@@ -2,7 +2,7 @@
 
 ## Description
 
-Converts REXPaint XML ascii-art files to a custom format with downsampling.
+Converts REXPaint XML ascii-art files to a user-customizable format with downsampling.
 
 Useful for MUDs and other text based applications.
 
@@ -33,7 +33,7 @@ Formats are provided as json.
 
 Format files inform the color encoding patterns for output.
 
-- See `/formats` for examples
+- See `/formats` for example formats. Add to these in the format of your choice!
 - See `/lib/mud_painter/config` for format fields
 
 ### Symbols
